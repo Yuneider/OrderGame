@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     Juego -Sandro-                                                               
+     ====================================================================== -->
+<project name="Juego" default="Crear Ambiente-AIA-.jar">
+    <description>
+            Genera el jar del framework  para AIA
+    </description>
+    <target name="Crear Ambiente-AIA-.jar" description="crea el Ambiente-AIA-.jar">
+    	<jar destfile="juego.jar"  basedir="bin">
+            <manifest>
+                <attribute name="Main-Class" value="presentacion.Juego"/>
+            </manifest>
+        </jar>
+    </target>
+</project>
+
