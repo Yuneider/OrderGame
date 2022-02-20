@@ -5,8 +5,6 @@
 package logica;
 
 import java.io.Serializable;
-import javax.swing.JList;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,7 +13,7 @@ import javax.swing.JOptionPane;
 public class Score implements Serializable{
     
     private int[] score;
-    
+   
     public Score(int size){
         score = new int[size];
         for(int i=0;i<size;i++){
@@ -48,10 +46,6 @@ public class Score implements Serializable{
             arr[i]=String.valueOf(score[i]);
         }
         return arr;
-    }
-    
-    public void showSocore(){
-        JOptionPane.showMessageDialog(null, new JList(getString()));
     }
     
 }

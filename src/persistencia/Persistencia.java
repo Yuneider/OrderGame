@@ -5,13 +5,10 @@
 package persistencia;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -19,19 +16,13 @@ import java.util.logging.Logger;
  */
 public class Persistencia {
     
+    private final String fileName;
     private ObjectOutputStream os;
     private ObjectInputStream is;
     private Object object;
     
     public Persistencia(String fileName){
-        try {
-            os = new ObjectOutputStream(new FileOutputStream(fileName));
-            is = new ObjectInputStream(new FileInputStream(fileName));
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Persistencia.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex){
-            Logger.getLogger(Persistencia.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        this.fileName = fileName;
     }
     
     public void setObject(Object object){
@@ -45,18 +36,23 @@ public class Persistencia {
     
     public void writteObject(){
         try {
+            os = new ObjectOutputStream(new FileOutputStream(fileName));
             os.writeObject(this.object);
             os.close();
         } catch (IOException ex) {
-            Logger.getLogger(Persistencia.class.getName()).log(Level.SEVERE, null, ex);
+           ex.printStackTrace();
         }
     }
     
     private void readObject(){
         try {
-            object = (Object) is.readObject();
-        } catch (ClassNotFoundException | IOException ex) {
-            Logger.getLogger(Persistencia.class.getName()).log(Level.SEVERE, null, ex);
+            is = new ObjectInputStream(new FileInputStream(fileName));
+            object = is.readObject();
+            is.close();
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
+        } catch (IOException ex){
+            ex.printStackTrace();
         }
     }
     
