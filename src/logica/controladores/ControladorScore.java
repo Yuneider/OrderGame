@@ -4,10 +4,10 @@
  */
 package logica.controladores;
 
+import core.persistencia.Persistencia;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import logica.Score;
-import persistencia.Persistencia;
 
 /**
  *

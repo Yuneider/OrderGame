@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package persistencia;
+package core.persistencia;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -44,7 +44,7 @@ public class Persistencia {
         }
     }
     
-    private void readObject(){
+    public Object readObject(){
         try {
             is = new ObjectInputStream(new FileInputStream(fileName));
             object = is.readObject();
@@ -54,6 +54,7 @@ public class Persistencia {
         } catch (IOException ex){
             ex.printStackTrace();
         }
+        return object;
     }
     
 }

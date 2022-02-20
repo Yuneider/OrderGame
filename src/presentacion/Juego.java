@@ -42,17 +42,13 @@ public class Juego extends AMediador implements IJuego{
 	public void setTablero(ITablero talero) {
 		this.talero=talero;		
 	}
+        @Override
 	public void setEstado(Object estado) {
 		this.estado=(Estado)estado;
 	}
+        @Override
 	public Object getEstado() {
 		return estado;
-	}
-	public static void main(String[] args) {
-		JFrame jf=new JFrame();
-		Juego juego=new Juego();
-		jf.getContentPane().add(juego);
-		juego.setEstado(new Inicial(juego));		
 	}
 	@Override
 	public void paint(Graphics pintor) {
@@ -69,4 +65,12 @@ public class Juego extends AMediador implements IJuego{
 	public void reportar() {		
 		talero.reportarScore();			
 	}
+
+        public static void main(String[] args) {
+		JFrame jf=new JFrame();
+		Juego juego=new Juego();
+		jf.getContentPane().add(juego);
+		juego.setEstado(new Inicial(juego));		
+	}
+        
 }

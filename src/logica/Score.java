@@ -3,22 +3,34 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package logica;
-
 import java.io.Serializable;
+import javax.swing.JList;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author yunei
+
+/**
+ *
+ * @author Yuneider
  */
 public class Score implements Serializable{
     
     private int[] score;
-   
+
     public Score(int size){
         score = new int[size];
         for(int i=0;i<size;i++){
             score[i]=0;
         }
+    }
+    public String[] getString(){
+        String[] arr = new String[score.length];
+        for(int i=0;i<score.length;i++){
+            arr[i]=String.valueOf(score[i]);
+        }
+        return arr;
     }
     
     public void insertScore(int score){
@@ -38,14 +50,6 @@ public class Score implements Serializable{
                 }    
             }
         }
-    }
-    
-    public String[] getString(){
-        String[] arr = new String[score.length];
-        for(int i=0;i<score.length;i++){
-            arr[i]=String.valueOf(score[i]);
-        }
-        return arr;
     }
     
 }
