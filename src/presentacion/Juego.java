@@ -12,65 +12,76 @@ import core.patrones.estado.Estado;
 import core.patrones.estado.Inicial;
 import core.patrones.mediador.AMediador;
 
-public class Juego extends AMediador implements IJuego{	
-	private static final long serialVersionUID = 1L;
-	public IJugador jugador;
-	public ILanzador lanzador;
-	public ITablero talero;
-	Estado estado;
-	@Override
-	public ILanzador getLanzador() {		
-		return lanzador;
-	}
-	@Override
-	public ITablero getTablero() {	
-		return talero;
-	}
-	@Override
-	public IJugador getJugador() {		
-		return jugador;
-	}
-	@Override
-	public void setLanzador(ILanzador lanzador) {
-		this.lanzador=lanzador;		
-	}
-	@Override
-	public void setJugador(IJugador jugador) {
-		this.jugador = jugador;		
-	}
-	@Override
-	public void setTablero(ITablero talero) {
-		this.talero=talero;		
-	}
-        @Override
-	public void setEstado(Object estado) {
-		this.estado=(Estado)estado;
-	}
-        @Override
-	public Object getEstado() {
-		return estado;
-	}
-	@Override
-	public void paint(Graphics pintor) {
-		super.paint(pintor);
-		talero.dibujar(pintor);
-		lanzador.dibujar(pintor);
-		jugador.dibujar(pintor);		
-	}
-	@Override
-	public boolean gameOver() {		
-		return talero!=null?talero.reportarGameOver():false;
-	}
-	@Override
-	public void reportar() {		
-		talero.reportarScore();			
-	}
+public class Juego extends AMediador implements IJuego {
 
-        public static void main(String[] args) {
-		JFrame jf=new JFrame();
-		Juego juego=new Juego();
-		jf.getContentPane().add(juego);
-		juego.setEstado(new Inicial(juego));		
-	}
-        
+    private static final long serialVersionUID = 1L;
+    public IJugador jugador;
+    public ILanzador lanzador;
+    public ITablero talero;
+    Estado estado;
+
+    @Override
+    public ILanzador getLanzador() {
+        return lanzador;
+    }
+
+    @Override
+    public ITablero getTablero() {
+        return talero;
+    }
+
+    @Override
+    public IJugador getJugador() {
+        return jugador;
+    }
+
+    @Override
+    public void setLanzador(ILanzador lanzador) {
+        this.lanzador = lanzador;
+    }
+
+    @Override
+    public void setJugador(IJugador jugador) {
+        this.jugador = jugador;
+    }
+
+    @Override
+    public void setTablero(ITablero talero) {
+        this.talero = talero;
+    }
+
+    @Override
+    public void setEstado(Object estado) {
+        this.estado = (Estado) estado;
+    }
+
+    @Override
+    public Object getEstado() {
+        return estado;
+    }
+
+    @Override
+    public void paint(Graphics pintor) {
+        super.paint(pintor);
+        talero.dibujar(pintor);
+        lanzador.dibujar(pintor);
+        jugador.dibujar(pintor);
+    }
+
+    @Override
+    public boolean gameOver() {
+        return talero != null ? talero.reportarGameOver() : false;
+    }
+
+    @Override
+    public void reportar() {
+        talero.reportarScore();
+    }
+
+    public static void main(String[] args) {
+        JFrame jf = new JFrame();
+        Juego juego = new Juego();
+        jf.getContentPane().add(juego);
+        juego.setEstado(new Inicial(juego));
+    }
 }
