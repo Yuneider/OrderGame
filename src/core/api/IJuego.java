@@ -4,11 +4,11 @@ import java.awt.Dimension;
 import java.awt.Point;
 
 public interface IJuego{
-	public static Dimension TAM  = new Dimension(346,350);
+	public static Dimension TAM  = new Dimension(562,551);
 	public static Point ORIGEN = new Point(0,50);
 		
-	public static int ANCHO = 30;
-	public static int ALTO  = 10;
+	public static int ANCHO = 50;
+	public static int ALTO  = 23;
 	public static int PASO  = ALTO/2;
 	public static int Y_LANZADOR = ORIGEN.y;
 	public static int Y_JUGADOR  = Y_LANZADOR+ 7*ALTO;
