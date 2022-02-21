@@ -114,4 +114,9 @@ public class Tablero extends AColega implements ITablero, IDibujable {
             pilas[i] = new Stack<IFicha>();
         }
     }
+    
+    @Override
+    public void mostrarScore(){
+       controladorScore.showScore();
+    }
 }

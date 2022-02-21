@@ -22,22 +22,34 @@ public class Inicial extends Estado {
 		juego.setTablero(new Tablero((AMediador)juego));
 		Container jp = (JPanel)juego,jf= (JPanel)juego;
 		while(!((jf=jf.getParent()) instanceof JFrame));
+                ((JFrame)jf).setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                //Center frame
+                //((JFrame)jf).setLocationRelativeTo(null);
 		((JFrame)jf).setResizable(false);		
 		((JFrame)jf).setSize(TAM.width,TAM.height);				
 		((JFrame)jf).setVisible(true);
 		((JFrame)jf).setFocusable(true);
 		if (jp.getComponentCount() == 0) {
-			final Button boton = new Button("Jugar");			
-			jp.add(boton);
-			boton.setFocusable(false);
-			boton.addActionListener(new ActionListener() {				
+                        final Button bScore = new Button("Ver score");
+			jp.add(bScore);
+			bScore.setFocusable(false);
+			bScore.addActionListener(new ActionListener() {				
 			public void actionPerformed(ActionEvent e) {
-				boton.setLabel(boton.getLabel(). equals("Jugar")?"Pausar":"Jugar");
+				juego.getTablero().mostrarScore();
+			}});
+                        bScore.setBounds(35, 5, 70, 25);
+                        final Button bJugar = new Button("Jugar");
+			jp.add(bJugar);
+			bJugar.setFocusable(false);
+			bJugar.addActionListener(new ActionListener() {				
+			public void actionPerformed(ActionEvent e) {
+				bJugar.setLabel(bJugar.getLabel(). equals("Jugar")?"Pausar":"Jugar");
 				new ComandoDeJugandoPausado((Estado) juego.getEstado()).ejecutar();
-			}});			
+			}});
+                        bJugar.setBounds(110, 5, 55, 25);
 		} else {
-			((Button)jp.getComponents()[0]). setLabel("Jugar");
-			((Button)jp.getComponents()[0]). setFocusable(false);
+			((Button)jp.getComponents()[1]). setLabel("Jugar");
+			((Button)jp.getComponents()[1]). setFocusable(false);
 		}
 	}
 	@Override

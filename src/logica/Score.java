@@ -4,8 +4,6 @@
  */
 package logica;
 import java.io.Serializable;
-import javax.swing.JList;
-import javax.swing.JOptionPane;
 
 /**
  *
