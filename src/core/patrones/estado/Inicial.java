@@ -24,7 +24,7 @@ public class Inicial extends Estado {
 		while(!((jf=jf.getParent()) instanceof JFrame));
                 ((JFrame)jf).setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
                 //Center frame
-                //((JFrame)jf).setLocationRelativeTo(null);
+                ((JFrame)jf).setLocationRelativeTo(null);
 		((JFrame)jf).setResizable(false);		
 		((JFrame)jf).setSize(TAM.width,TAM.height);				
 		((JFrame)jf).setVisible(true);

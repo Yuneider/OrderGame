@@ -4,7 +4,7 @@ import java.awt.Dimension;
 import java.awt.Point;
 
 public interface IJuego{
-	public static Dimension TAM  = new Dimension(226,250);
+	public static Dimension TAM  = new Dimension(346,350);
 	public static Point ORIGEN = new Point(0,50);
 		
 	public static int ANCHO = 30;
@@ -15,7 +15,7 @@ public interface IJuego{
 	public static int Y_TALERO   = Y_JUGADOR + 3*ALTO;
 	public static int CAPACIDAD_DEL_JUGADOR = 3;
 	
-	public static int N_COLUMNAS = 7;
+	public static int N_COLUMNAS = 11;
 	public static int N_FILAS    = N_COLUMNAS - 2;
 	
 	public static int ANCHO_JUEGO = ANCHO*N_COLUMNAS;

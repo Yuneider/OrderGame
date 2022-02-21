@@ -6,7 +6,7 @@
             <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/presentacion/Juego.java</file>
             <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/logica/Tablero.java</file>
             <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/core/patrones/estado/Inicial.java</file>
-            <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/core/patrones/estado/Pausado.java</file>
+            <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/core/api/IJuego.java</file>
         </group>
     </open-files>
 </project-private>
