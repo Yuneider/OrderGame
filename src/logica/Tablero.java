@@ -22,6 +22,7 @@ public class Tablero extends AColega implements ITablero, IDibujable {
         iniciar();
     }
 
+    @Override
     public int getPuntaje() {
         return puntaje;
     }

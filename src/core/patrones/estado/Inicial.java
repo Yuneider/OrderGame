@@ -10,10 +10,11 @@ import core.patrones.comando.ComandoDeJugandoPausado;
 import core.patrones.fabrica.*;
 import core.patrones.mediador.AMediador;
 import logica.*;
+import logica.controladores.ControladorPersistencia;
 
 public class Inicial extends Estado {
-	public Inicial(IJuego juego) {
-		super(juego);		
+	public Inicial(IJuego juego,ControladorPersistencia persistencia) {
+		super(juego,persistencia);		
 		armar();		
 	}
 	private void armar() {
@@ -35,7 +36,7 @@ public class Inicial extends Estado {
 			bScore.setFocusable(false);
 			bScore.addActionListener(new ActionListener() {				
 			public void actionPerformed(ActionEvent e) {
-                                    
+                                    persistencia.showScore();
 			}});
                         bScore.setBounds(35, 5, 70, 25);
                         bScore.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -61,6 +62,6 @@ public class Inicial extends Estado {
 	}
 	@Override
 	public void manejar() {	
-		juego.setEstado(new Jugando(juego));
+		juego.setEstado(new Jugando(juego,persistencia));
 	}
 }

@@ -16,7 +16,7 @@ import java.io.ObjectOutputStream;
  */
 public class Persistencia {
     
-    private final String fileName;
+    private String fileName;
     private ObjectOutputStream os;
     private ObjectInputStream is;
     private Object object;
@@ -32,6 +32,14 @@ public class Persistencia {
     public Object getObject(){
         readObject();
         return object;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
     
     public void writteObject(){

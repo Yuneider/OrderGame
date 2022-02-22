@@ -36,6 +36,7 @@ public class Jugador extends AColega implements IJugador, IDibujable, IDetenedor
     KeyAdapter enJuego;
     private String nombre;
 
+    @Override
     public String getNombre() {
         return nombre;
     }

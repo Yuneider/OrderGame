@@ -6,22 +6,36 @@ package logica;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import javax.swing.JList;
+import javax.swing.JOptionPane;
 import presentacion.Juego;
 
 /**
  *
  * @author yunei
  */
-public class Consola implements Serializable{
-    
+public class Consola implements Serializable {
+
     private ArrayList<Juego> games;
-    
-    public Consola(){
-        games=new ArrayList();
+
+    public Consola() {
+        games = new ArrayList();
     }
-    
-    public void insertGame(Juego game){
+
+    public void insertGame(Juego game) {
         games.add(game);
     }
-    
+
+    private String[] getString() {
+        String[] result = new String[games.size()];
+        for (int i = 0; i < games.size(); i++) {
+            result[i] = "Nombre: " + games.get(i).jugador.getNombre() + " Score: " + games.get(i).getTablero().getPuntaje();
+        }
+        return result;
+    }
+
+    public void showGames() {
+        JOptionPane.showMessageDialog(null, new JList(getString()), "Games", 1);
+    }
+
 }

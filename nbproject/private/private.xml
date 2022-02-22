@@ -4,10 +4,14 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/logica/Consola.java</file>
-            <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/logica/Score.java</file>
+            <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/presentacion/Juego.java</file>
             <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/logica/Jugador.java</file>
+            <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/logica/Tablero.java</file>
+            <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/core/api/ITablero.java</file>
+            <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/core/patrones/estado/Inicial.java</file>
             <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/logica/controladores/ControladorPersistencia.java</file>
-            <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/logica/controladores/ControladorScore.java</file>
+            <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/presentacion/Main.java</file>
+            <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/core/patrones/estado/Final.java</file>
         </group>
     </open-files>
 </project-private>

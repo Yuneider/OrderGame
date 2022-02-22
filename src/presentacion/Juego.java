@@ -2,14 +2,11 @@ package presentacion;
 
 import java.awt.Graphics;
 
-import javax.swing.JFrame;
-
 import core.api.IJuego;
 import core.api.IJugador;
 import core.api.ILanzador;
 import core.api.ITablero;
 import core.patrones.estado.Estado;
-import core.patrones.estado.Inicial;
 import core.patrones.mediador.AMediador;
 
 public class Juego extends AMediador implements IJuego{
@@ -77,12 +74,5 @@ public class Juego extends AMediador implements IJuego{
     public void reportar() {
         talero.reportarScore();
     }
-    
-//    public static void main(String[] args) {
-//        JFrame jf = new JFrame();
-//        Juego juego = new Juego();
-//        jf.getContentPane().add(juego);
-//        juego.setEstado(new Inicial(juego));
-//    }
   
 }

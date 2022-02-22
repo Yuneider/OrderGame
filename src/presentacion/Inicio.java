@@ -63,9 +63,9 @@ public class Inicio extends JFrame{
         
     }
     
-    public static void main (String [] args ) {
-	Inicio show = new Inicio();
-    }
+//    public static void main (String [] args ) {
+//	Inicio show = new Inicio();
+//    }
 }
 
 
