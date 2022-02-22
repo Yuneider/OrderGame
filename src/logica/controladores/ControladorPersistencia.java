@@ -32,7 +32,7 @@ public class ControladorPersistencia {
         score = (Score) persistence.getObject();
 
     }
-
+    
     public void saveGame(Juego game) {
         console.insertGame(game);
         persistence.setFileName(consoleFile);
@@ -56,11 +56,11 @@ public class ControladorPersistencia {
         score.showScore();
     }
 
-    public void showSavedGames() {
+    public Juego showSavedGames() {
         persistence.setFileName(consoleFile);
         persistence.setObject(this.console);
         console = (Consola) persistence.getObject();
-        console.showGames();
+        return console.getGame(console.showGames());
     }
 
 }

@@ -29,13 +29,26 @@ public class Consola implements Serializable {
     private String[] getString() {
         String[] result = new String[games.size()];
         for (int i = 0; i < games.size(); i++) {
-            result[i] = "Score: " + games.get(i).getTablero().getPuntaje();
+            result[i] = "Nombre: "+games.get(i).getNombre()+" Score: " + games.get(i).getTablero().getPuntaje();
         }
         return result;
     }
 
-    public void showGames() {
-        JOptionPane.showMessageDialog(null, new JList(getString()), "Games", 1);
+    public String showGames() {
+        return (String) JOptionPane.showInputDialog(null,"Selecciona un juego","Elegir",JOptionPane.QUESTION_MESSAGE,null,getString(),getString()[0]);
     }
 
+    public Juego getGame(String info){
+        String[] arr = info.split(" ");
+        return findGame(arr[1],Integer.parseInt(arr[arr.length-1]));
+    }
+    
+    private Juego findGame(String name,int score){
+        for(Juego i:games){
+            if(i.getNombre().equals(name) && i.getTablero().getPuntaje()==score)
+                return i;
+        }
+        return null;
+    }
+    
 }

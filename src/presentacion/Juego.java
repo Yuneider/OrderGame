@@ -13,10 +13,11 @@ import java.io.Serializable;
 public class Juego extends AMediador implements IJuego, Serializable{
 
     private static final long serialVersionUID = 1L;
-    transient public IJugador jugador;
+    public IJugador jugador;
     public ILanzador lanzador;
     public ITablero talero;
     Estado estado;
+    private String nombre;
     
     @Override
     public ILanzador getLanzador() {
@@ -74,6 +75,16 @@ public class Juego extends AMediador implements IJuego, Serializable{
     @Override
     public void reportar() {
         talero.reportarScore();
+    }
+
+    @Override
+    public void setNombre(String nombre) {
+        this.nombre=nombre;
+    }
+
+    @Override
+    public String getNombre() {
+        return this.nombre;
     }
   
 }

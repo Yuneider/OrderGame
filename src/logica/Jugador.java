@@ -34,7 +34,7 @@ import java.io.Serializable;
 public class Jugador extends AColega implements IJugador, IDibujable, IDetenedor, IComponente, Serializable{
 
     Stack<IFicha> fichas = new Stack<IFicha>();
-    KeyAdapter enJuego;
+    transient KeyAdapter enJuego;
 
     public Jugador(AMediador juego) {
         super(juego);

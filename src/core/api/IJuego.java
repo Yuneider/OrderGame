@@ -37,4 +37,6 @@ public interface IJuego extends Serializable{
 	Object  getEstado();
 	boolean gameOver();	
 	void reportar();
+        void setNombre(String nombre);
+        String getNombre();
 }
