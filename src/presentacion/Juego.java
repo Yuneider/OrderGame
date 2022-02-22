@@ -78,11 +78,11 @@ public class Juego extends AMediador implements IJuego {
         talero.reportarScore();
     }
     
-//    public static void main(String[] args) {
-//        JFrame jf = new JFrame();
-//        Juego juego = new Juego();
-//        jf.getContentPane().add(juego);
-//        juego.setEstado(new Inicial(juego));
-//    }
+    public static void main(String[] args) {
+        JFrame jf = new JFrame();
+        Juego juego = new Juego();
+        jf.getContentPane().add(juego);
+        juego.setEstado(new Inicial(juego));
+      }
   
 }

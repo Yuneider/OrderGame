@@ -12,16 +12,20 @@ import core.patrones.mediador.AMediador;
 import logica.*;
 
 public class Inicial extends Estado {
+        private Color color;
 	public Inicial(IJuego juego) {
 		super(juego);		
 		armar();		
 	}
 	private void armar() {
+                color = new Color(126,184,246);
 		juego.setJugador(new Jugador((AMediador)juego));
 		juego.setLanzador(new Lanzador((AMediador)juego,Math.round(Math. random()*1) == 0?new FabricaDeFichaDeColor():new FabricaDeFichaDeLetra()));
 		juego.setTablero(new Tablero((AMediador)juego));
 		Container jp = (JPanel)juego,jf= (JPanel)juego;
                 
+                jp.setBackground(color);
+                                
 		while(!((jf=jf.getParent()) instanceof JFrame));
                 ((JFrame)jf).setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
                 //Center frame
