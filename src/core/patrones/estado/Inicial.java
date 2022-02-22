@@ -33,6 +33,7 @@ public class Inicial extends Estado implements Serializable {
                 
         Container jp = (JPanel) juego, jf = (JPanel) juego;
         jp.setLayout(null);
+        jp.setBackground(new Color(126, 184,246));
         while (!((jf = jf.getParent()) instanceof JFrame));
         ((JFrame) jf).setResizable(false);
         ((JFrame) jf).setBackground(Color.DARK_GRAY);
@@ -61,7 +62,8 @@ public class Inicial extends Estado implements Serializable {
             ((Button) jp.getComponents()[0]).setBounds(240, 5, 70, 25);
             ((Button) jp.getComponents()[0]).setCursor(new Cursor(Cursor.HAND_CURSOR));
             ((Button) jp.getComponents()[0]).setFont(new Font("Helvetica", Font.BOLD, 13));
-            ((Button) jp.getComponents()[0]).setBackground(Color.lightGray);
+            ((Button) jp.getComponents()[0]).setBackground(Color.BLUE);
+            ((Button) jp.getComponents()[0]).setForeground(Color.WHITE);
             
 
             ((Button) jp.getComponents()[1]).setLabel("Mejores scores");
@@ -74,7 +76,8 @@ public class Inicial extends Estado implements Serializable {
             ((Button) jp.getComponents()[1]).setBounds(15, 5, 110, 25);
             ((Button) jp.getComponents()[1]).setCursor(new Cursor(Cursor.HAND_CURSOR));
             ((Button) jp.getComponents()[1]).setFont(new Font("Helvetica", Font.BOLD, 13));
-            ((Button) jp.getComponents()[1]).setBackground(Color.WHITE);
+            ((Button) jp.getComponents()[1]).setBackground(Color.BLUE);
+            ((Button) jp.getComponents()[1]).setForeground(Color.WHITE);
             
 
             ((Button) jp.getComponents()[2]).setLabel("Guardar");
@@ -87,7 +90,8 @@ public class Inicial extends Estado implements Serializable {
             ((Button) jp.getComponents()[2]).setBounds(130, 5, 70, 25);
             ((Button) jp.getComponents()[2]).setCursor(new Cursor(Cursor.HAND_CURSOR));
             ((Button) jp.getComponents()[2]).setFont(new Font("Helvetica", Font.BOLD, 13));
-            ((Button) jp.getComponents()[2]).setBackground(Color.WHITE);
+            ((Button) jp.getComponents()[2]).setBackground(Color.BLUE);
+            ((Button) jp.getComponents()[2]).setForeground(Color.WHITE);
             
 
             ((Button) jp.getComponents()[3]).setLabel("Juegos guardados");
@@ -106,7 +110,8 @@ public class Inicial extends Estado implements Serializable {
             ((Button) jp.getComponents()[3]).setBounds(350, 5, 150, 25);
             ((Button) jp.getComponents()[3]).setCursor(new Cursor(Cursor.HAND_CURSOR));
             ((Button) jp.getComponents()[3]).setFont(new Font("Helvetica", Font.BOLD, 13));
-            ((Button) jp.getComponents()[3]).setBackground(Color.WHITE);
+            ((Button) jp.getComponents()[3]).setBackground(Color.BLUE);
+            ((Button) jp.getComponents()[3]).setForeground(Color.WHITE);
         
     }
 

@@ -16,14 +16,14 @@ import logica.controladores.ControladorPersistencia;
  */
 public class Main {
    
-    public static void main(String[] args) {
-        JFrame jf = new JFrame();
-        Juego juego = new Juego();
-        jf.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        ControladorPersistencia persistencia = new ControladorPersistencia();
-        juego.setNombre(JOptionPane.showInputDialog(null, "Ingrese su nombre"));
-        jf.getContentPane().add(juego);
-        juego.setEstado(new Inicial(juego,persistencia));
-    }
+//    public static void main(String[] args) {
+//        JFrame jf = new JFrame();
+ //       Juego juego = new Juego();
+ //       jf.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+ //       ControladorPersistencia persistencia = new ControladorPersistencia();
+ //       juego.setNombre(JOptionPane.showInputDialog(null, "Ingrese su nombre"));
+ //       jf.getContentPane().add(juego);
+ //       juego.setEstado(new Inicial(juego,persistencia));
+ //   }
     
 }
