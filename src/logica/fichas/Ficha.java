@@ -3,8 +3,9 @@ package logica.fichas;
 import static core.api.IJuego.PASO;
 import java.awt.Point;
 import core.api.IFicha;
+import java.io.Serializable;
 
-public abstract class Ficha implements IFicha {
+public abstract class Ficha implements IFicha,Serializable {
 	protected Point posicion;	
 	public Ficha(Point posicion) {		
 		this.posicion = posicion;

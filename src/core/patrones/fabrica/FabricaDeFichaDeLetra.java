@@ -9,9 +9,10 @@ import static logica.fichas.FichaDeLetra.letras;
 import java.awt.Point;
 
 import core.api.IFicha;
+import java.io.Serializable;
 import logica.fichas.FichaDeLetra;
 
-public class FabricaDeFichaDeLetra implements IFabricaDeFichas {
+public class FabricaDeFichaDeLetra implements IFabricaDeFichas, Serializable {
 	@Override
 	public IFicha crearFicha(Point posicion) {
 		int letra_i   = (int) floor(random() * N_LETRAS);		

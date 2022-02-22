@@ -1,9 +1,10 @@
 package core.patrones.estado;
 
 import core.api.IJuego;
+import java.io.Serializable;
 import logica.controladores.ControladorPersistencia;
 
-public class Final extends Estado {
+public class Final extends Estado implements Serializable{
 	public Final(IJuego juego,ControladorPersistencia persistencia) {
 		super(juego,persistencia);
 		juego.reportar();		

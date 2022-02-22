@@ -6,8 +6,9 @@ import java.awt.Graphics;
 import java.awt.Point;
 
 import core.api.IFicha;
+import java.io.Serializable;
 
-public class FichaDeLetra extends Ficha{
+public class FichaDeLetra extends Ficha implements Serializable{
 	public static int N_LETRAS = (int)Math.ceil(N_COLUMNAS*1.3);
     final public static char[]  letras = crearLetras();
 	private static char[] crearLetras() {

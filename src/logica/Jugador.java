@@ -29,21 +29,12 @@ import core.api.IJugador;
 import core.patrones.componente.IComponente;
 import core.patrones.mediador.AColega;
 import core.patrones.mediador.AMediador;
+import java.io.Serializable;
 
-public class Jugador extends AColega implements IJugador, IDibujable, IDetenedor, IComponente {
+public class Jugador extends AColega implements IJugador, IDibujable, IDetenedor, IComponente, Serializable{
 
     Stack<IFicha> fichas = new Stack<IFicha>();
     KeyAdapter enJuego;
-    private String nombre;
-
-    @Override
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     public Jugador(AMediador juego) {
         super(juego);

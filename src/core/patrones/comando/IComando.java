@@ -1,5 +1,7 @@
 package core.patrones.comando;
 
-public interface IComando {
+import java.io.Serializable;
+
+public interface IComando extends Serializable{
 	void ejecutar();
 }

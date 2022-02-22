@@ -9,8 +9,9 @@ import core.api.*;
 import core.patrones.estado.Estado;
 import core.patrones.fabrica.IFabricaDeFichas;
 import core.patrones.mediador.*;
+import java.io.Serializable;
 
-public class Lanzador extends AColega implements Runnable,IIniciador,IDetenedor,ILanzador,IDibujable {
+public class Lanzador extends AColega implements Runnable,IIniciador,IDetenedor,ILanzador,IDibujable,Serializable {
 	List<IFicha> fichas = new ArrayList<IFicha>();	
     Thread lanzamientos;    
     IFabricaDeFichas fabrica;

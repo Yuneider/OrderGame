@@ -10,8 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import core.api.IFicha;
+import java.io.Serializable;
 
-public class FichaDeColor extends Ficha {
+public class FichaDeColor extends Ficha implements Serializable {
 	public static int TOPE = 255;
 	public static int N_COLORES = (int) ceil(N_COLUMNAS*1.3);
 	public final static List<Color> COLORES = crearColores();

@@ -1,9 +1,10 @@
 package core.patrones.estado;
 
 import core.api.IJuego;
+import java.io.Serializable;
 import logica.controladores.ControladorPersistencia;
 
-public class Pausado extends Estado {
+public class Pausado extends Estado implements Serializable{
 	public Pausado(IJuego juego,ControladorPersistencia persistencia) {
 		super(juego,persistencia);
 		juego.getLanzador().detener();

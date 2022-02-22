@@ -29,7 +29,7 @@ public class Consola implements Serializable {
     private String[] getString() {
         String[] result = new String[games.size()];
         for (int i = 0; i < games.size(); i++) {
-            result[i] = "Nombre: " + games.get(i).jugador.getNombre() + " Score: " + games.get(i).getTablero().getPuntaje();
+            result[i] = "Score: " + games.get(i).getTablero().getPuntaje();
         }
         return result;
     }

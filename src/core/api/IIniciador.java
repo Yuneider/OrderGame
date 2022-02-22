@@ -1,5 +1,7 @@
 package core.api;
 
-public interface IIniciador {
+import java.io.Serializable;
+
+public interface IIniciador extends Serializable{
 	void iniciar();
 }

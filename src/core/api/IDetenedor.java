@@ -1,5 +1,7 @@
 package core.api;
 
-public interface IDetenedor {
+import java.io.Serializable;
+
+public interface IDetenedor extends Serializable {
 	void detener();
 }

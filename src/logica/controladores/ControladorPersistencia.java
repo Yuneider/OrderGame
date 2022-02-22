@@ -5,6 +5,7 @@
 package logica.controladores;
 
 import core.persistencia.Persistencia;
+import javax.swing.JOptionPane;
 import logica.Consola;
 import logica.Score;
 import presentacion.Juego;
@@ -14,50 +15,52 @@ import presentacion.Juego;
  * @author yunei
  */
 public class ControladorPersistencia {
-    
-    private final String consoleFile="consolData.txt";
-    private final String scoreFile="scoreData.txt";
+
+    private final String consoleFile = "consoleData.json";
+    private final String scoreFile = "scoreData.txt";
     private Consola console;
     private Score score;
     private Persistencia persistence;
-    
-    public ControladorPersistencia(){
-        persistence=new Persistencia(consoleFile);
+
+    public ControladorPersistencia() {
+        persistence = new Persistencia(consoleFile);
         persistence.setObject(new Consola());
-        if(!persistence.getObject().equals(null))
-            console=(Consola)persistence.getObject();
-        
-        persistence=new Persistencia(scoreFile);
+        console = (Consola) persistence.getObject();
+
+        persistence = new Persistencia(scoreFile);
         persistence.setObject(new Score(10));
-        if(!persistence.getObject().equals(null))
-            score=(Score)persistence.getObject();
+        score = (Score) persistence.getObject();
 
     }
-    
-    public void insertGame(Juego game){
+
+    public void saveGame(Juego game) {
         console.insertGame(game);
         persistence.setFileName(consoleFile);
         persistence.setObject(console);
         persistence.writteObject();
+        JOptionPane.showMessageDialog(null, "Saved");
     }
-    
-    public void insertScore(int score){
+
+    public void insertScore(int score) {
         this.score.insertScore(score);
         persistence.setFileName(scoreFile);
         persistence.setObject(this.score);
         persistence.writteObject();
+        JOptionPane.showMessageDialog(null, "Inserted");
     }
-    
-    public void showScore(){
+
+    public void showScore() {
+        persistence.setFileName(scoreFile);
         persistence.setObject(this.score);
-        score=(Score)persistence.getObject();
+        score = (Score) persistence.getObject();
         score.showScore();
     }
-    
-    public void showSavedGames(){
+
+    public void showSavedGames() {
+        persistence.setFileName(consoleFile);
         persistence.setObject(this.console);
-        console=(Consola)persistence.getObject();
+        console = (Consola) persistence.getObject();
         console.showGames();
     }
-    
+
 }

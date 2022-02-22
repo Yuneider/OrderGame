@@ -2,8 +2,9 @@ package core.api;
 
 import java.awt.Dimension;
 import java.awt.Point;
+import java.io.Serializable;
 
-public interface IJuego{
+public interface IJuego extends Serializable{
 	public static Dimension TAM  = new Dimension(562,551);
 	public static Point ORIGEN = new Point(0,50);
 		

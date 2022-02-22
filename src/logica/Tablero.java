@@ -8,8 +8,9 @@ import java.util.Stack;
 import javax.swing.*;
 import core.api.*;
 import core.patrones.mediador.*;
+import java.io.Serializable;
 
-public class Tablero extends AColega implements ITablero, IDibujable {
+public class Tablero extends AColega implements ITablero, IDibujable, Serializable {
 
     public final static int PUNTAJE_X_COLUMNA = 10;
     Stack<IFicha> pilas[];

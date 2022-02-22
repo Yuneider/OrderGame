@@ -1,6 +1,8 @@
 package core.api;
 
-public interface ITablero extends IDibujable ,IIniciador{
+import java.io.Serializable;
+
+public interface ITablero extends IDibujable ,IIniciador, Serializable{
 	void recogerFichas();
 	void recibirFicha(IFicha ficha);
 	void verificarTrios();	

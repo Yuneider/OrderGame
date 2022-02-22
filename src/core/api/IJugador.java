@@ -1,7 +1,8 @@
 package core.api;
 
-public interface IJugador extends IIniciador,IDetenedor,IDibujable{
+import java.io.Serializable;
+
+public interface IJugador extends IIniciador,IDetenedor,IDibujable,Serializable{
 	void capturarFichas();
 	void ordenarFichas();
-        String getNombre();
 }

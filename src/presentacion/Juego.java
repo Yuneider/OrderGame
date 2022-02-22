@@ -8,11 +8,12 @@ import core.api.ILanzador;
 import core.api.ITablero;
 import core.patrones.estado.Estado;
 import core.patrones.mediador.AMediador;
+import java.io.Serializable;
 
-public class Juego extends AMediador implements IJuego{
+public class Juego extends AMediador implements IJuego, Serializable{
 
     private static final long serialVersionUID = 1L;
-    public IJugador jugador;
+    transient public IJugador jugador;
     public ILanzador lanzador;
     public ITablero talero;
     Estado estado;
