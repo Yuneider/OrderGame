@@ -23,7 +23,12 @@ public class Consola implements Serializable {
     }
 
     public void insertGame(Juego game) {
-        games.add(game);
+        if(findPlayer(game.getNombre())==null)
+            games.add(game);
+        else{
+            Juego g = findPlayer(game.getNombre());
+            games.set(games.indexOf(g),game);
+        }
     }
 
     private String[] getString() {
@@ -46,6 +51,14 @@ public class Consola implements Serializable {
     private Juego findGame(String name,int score){
         for(Juego i:games){
             if(i.getNombre().equals(name) && i.getTablero().getPuntaje()==score)
+                return i;
+        }
+        return null;
+    }
+    
+    private Juego findPlayer(String name){
+        for(Juego i:games){
+            if(i.getNombre().equals(name))
                 return i;
         }
         return null;
