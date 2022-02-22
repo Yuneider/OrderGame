@@ -6,4 +6,5 @@ public interface ITablero extends IDibujable ,IIniciador{
 	void verificarTrios();	
 	boolean reportarGameOver();
 	void reportarScore();
+        void mostrarScore();
 }
