@@ -5,35 +5,37 @@
 package logica.controladores;
 
 import core.persistencia.Persistencia;
-import javax.swing.JList;
-import javax.swing.JOptionPane;
-import logica.Score;
+import logica.Consola;
+import presentacion.Juego;
 
 /**
  *
  * @author yunei
  */
-public class ControladorScore {
+public class ControladorPersistencia {
     
     private final String fileName="data.bin";
-    private Score score;
+    private Consola console;
     private Persistencia persistence;
     
-    public ControladorScore(){
+    public ControladorPersistencia(){
         persistence=new Persistencia(fileName);
-        persistence.setObject(new Score(10));
-        score=(Score)persistence.getObject();
+        persistence.setObject(new Consola());
+        console=(Consola)persistence.getObject();
     }
     
-    public void insert(int score){
-        this.score.insertScore(score);
-        persistence.setObject(this.score);
+    public void insert(Juego game){
+        console.insertGame(game);
+        persistence.setObject(console);
         persistence.writteObject();
     }
     
     public void showScore(){
         persistence.getObject();
-        JOptionPane.showMessageDialog(null, new JList(score.getString()));
+    }
+    
+    public void showSavedGames(){
+        persistence.getObject();
     }
     
 }

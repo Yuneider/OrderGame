@@ -8,15 +8,13 @@ import java.util.Stack;
 import javax.swing.*;
 import core.api.*;
 import core.patrones.mediador.*;
-import logica.controladores.ControladorScore;
 
 public class Tablero extends AColega implements ITablero, IDibujable {
 
     public final static int PUNTAJE_X_COLUMNA = 10;
     Stack<IFicha> pilas[];
     int puntaje;
-    private ControladorScore controladorScore = new ControladorScore();
-    
+
     public Tablero(AMediador juego) {
         super(juego);
         posicion = new Point(ORIGEN.x, Y_TALERO);
@@ -24,6 +22,10 @@ public class Tablero extends AColega implements ITablero, IDibujable {
         iniciar();
     }
 
+    public int getPuntaje() {
+        return puntaje;
+    }
+    
     @Override
     public void recibirFicha(IFicha f_i) {
         int columna = f_i.getPosicion().x / ANCHO;
@@ -89,7 +91,6 @@ public class Tablero extends AColega implements ITablero, IDibujable {
             @Override
             public void run() {
                 JOptionPane.showMessageDialog(null, "Score: " + puntaje);
-                controladorScore.insert(puntaje);
                 iniciar();
             }
         });
@@ -115,8 +116,4 @@ public class Tablero extends AColega implements ITablero, IDibujable {
         }
     }
     
-    @Override
-    public void mostrarScore(){
-       controladorScore.showScore();
-    }
 }

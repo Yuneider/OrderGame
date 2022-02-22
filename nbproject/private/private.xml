@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/User/Documents/FIS/OrderGame/src/presentacion/Inicio.java</file>
-            <file>file:/C:/Users/User/Documents/FIS/OrderGame/src/core/api/ITablero.java</file>
-            <file>file:/C:/Users/User/Documents/FIS/OrderGame/src/core/api/IJuego.java</file>
-            <file>file:/C:/Users/User/Documents/FIS/OrderGame/src/logica/Tablero.java</file>
-            <file>file:/C:/Users/User/Documents/FIS/OrderGame/src/core/patrones/estado/Inicial.java</file>
-            <file>file:/C:/Users/User/Documents/FIS/OrderGame/src/presentacion/Juego.java</file>
+            <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/logica/Consola.java</file>
+            <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/logica/Score.java</file>
+            <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/logica/Jugador.java</file>
+            <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/logica/controladores/ControladorPersistencia.java</file>
+            <file>file:/D:/Yune/Distrital/Semester%206/Software%20Engineering/OrderGame/src/logica/controladores/ControladorScore.java</file>
         </group>
     </open-files>
 </project-private>

@@ -35,7 +35,7 @@ public class Inicial extends Estado {
 			bScore.setFocusable(false);
 			bScore.addActionListener(new ActionListener() {				
 			public void actionPerformed(ActionEvent e) {
-				juego.getTablero().mostrarScore();
+                                    
 			}});
                         bScore.setBounds(35, 5, 70, 25);
                         bScore.setCursor(new Cursor(Cursor.HAND_CURSOR));

@@ -12,14 +12,14 @@ import core.patrones.estado.Estado;
 import core.patrones.estado.Inicial;
 import core.patrones.mediador.AMediador;
 
-public class Juego extends AMediador implements IJuego {
+public class Juego extends AMediador implements IJuego{
 
     private static final long serialVersionUID = 1L;
     public IJugador jugador;
     public ILanzador lanzador;
     public ITablero talero;
     Estado estado;
-
+    
     @Override
     public ILanzador getLanzador() {
         return lanzador;
